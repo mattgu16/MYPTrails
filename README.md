@@ -1,2 +1,2 @@
 # MYPTrails
-hello world
+Hiking Trail Selector by Tejas Guha and Matthew Gu
