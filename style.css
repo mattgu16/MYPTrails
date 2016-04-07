@@ -15,7 +15,7 @@ body {
 /* Headings and Paragraphs */
 h1, h2, h3 {
     text-align:center;
-    color:white;
+    color:#16a085;
     font-size: 200%;
 }
 /* Headers and Nav Bars*/
@@ -161,6 +161,16 @@ div.content-header {
     margin: auto;
     border-radius: 5%;
 }
+div.content-header-wide {
+    color: #fff;
+    font-size: 150%;
+    background-color:rgba(255,255,255,0.1);
+    text-align: center; 
+    width: 50%;
+    padding: 3px;
+    margin: auto;
+    border-radius: 10px;
+}
 div.image {
     text-align: center;
 }
@@ -179,4 +189,8 @@ img.rounded-sharp {
 }
 tr {
     height:50px;
+    
+}
+td {
+    padding-right: 30px;
 }
