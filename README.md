@@ -1,2 +1,1 @@
-# Info for coding
-Trail Name Character Nubmer:
+# I dont know what to put here pls
