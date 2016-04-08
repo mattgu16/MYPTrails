@@ -1,2 +1,2 @@
-# MYPTrails
-Trail Information Output Displayed on Webpage
+# Info for coding
+Trail Name Character Nubmer:
