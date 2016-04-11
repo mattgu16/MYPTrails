@@ -1,2 +1,2 @@
-# MYPTrails
-Hiking Trail Selector by Tejas Guha and Matthew Gu
+# Trails
+Hiking Trail Comparison/Selector by Tejas Guha and Matthew Gu
