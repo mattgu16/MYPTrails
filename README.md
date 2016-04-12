@@ -1,4 +1,4 @@
-Trails
+Trails [![Build Status]
 ============
 Maryland Hiking Trail Filter
 
