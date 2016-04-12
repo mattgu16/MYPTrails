@@ -1,4 +1,4 @@
-Trails [![Build Status]
+Trails [![Build Status](https://github.com/mattgu16/MYPTrails)]
 ============
 Maryland Hiking Trail Filter
 
