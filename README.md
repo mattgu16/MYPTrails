@@ -10,5 +10,5 @@ _Prerequisites: This project requires you to have Python installed on your compu
 1. [Download the file folder](#).
 2. Unzip the folder with third party software (or Windows default extracting).
 3. **Remember to keep all of the files in the same folder.**
-4. Run file1.py
+4. Run file1.py.
 
