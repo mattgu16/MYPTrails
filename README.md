@@ -1,4 +1,4 @@
-Trails [![Build Status](#)](https://travis-ci.org/twizmwazin/CardinalPGM)
+Trails
 ============
 Maryland Hiking Trail Filter
 
