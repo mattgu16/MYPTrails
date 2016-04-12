@@ -1,6 +1,6 @@
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def read_trails(path):
-	file = open(path)
+	file = open(path, encoding="utf8")
 	text = file.read()
 	trails = []
 	g = text.find('>')
