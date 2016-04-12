@@ -1,3 +1,3 @@
-Trails
+Trails - Python
 ========
-Maryland Hiking Trail Selector/Filter
+Maryland Hiking Trail Selector/Filter - Python Code
