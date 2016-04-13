@@ -35,7 +35,9 @@ def read_trails(path):
 	#Find trails that meet certain properties
 	def find_prop(attr, prop):
 		trails = read_trails('H:/trails.txt')
+		listy = []
 		for i in trails:
 			if i[attr] == prop:
-				print(i['Name'])
+				listy.append(i)
+		return listy
 
