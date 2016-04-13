@@ -33,11 +33,41 @@ def read_trails(path):
 		g = text.find('>',g+1)
 	return trails
 	#Find trails that meet certain properties
-	def find_prop(attr, prop):
-		trails = read_trails('H:/trails.txt')
-		listy = []
-		for i in trails:
-			if i[attr] == prop:
-				listy.append(i)
-		return listy
-
+def find_prop(attr, prop):
+    trails = read_trails('trails.txt')
+    for i in trails:
+        if i[attr] == prop:
+            print(i['Name'])
+def find_length():
+    trails = read_trails("trails.txt")
+    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+")
+    validrange=["<5","5-10","10-15","15-20","20+"]
+    while mirange not in validrange:
+        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+")  
+    for q in trails:
+        length=float(i["Length"])
+        if mirange=="<5":
+            if length<5:
+                print(length)
+        elif mirange=="5-10":
+            if length>=5:
+                if length<=10:
+                    print(length)        
+        elif mirange=="10-15":
+            if length>=10:
+                if length<=15:
+                    print(length)
+        elif mirange=="15-20":
+            if length>=15:
+                if length<=20:
+                    print(length)           
+            
+        else:
+            if length>20:
+                print(length)
+        
+        
+        
+        
+        
+        
