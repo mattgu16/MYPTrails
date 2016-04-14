@@ -73,8 +73,8 @@ def find_length():
 #-------------------------------#
 #Adds results in webpage    
 def add_results(result_list):
-	file = open("H:/webpage_template.html", "w")
-	trails = read_trails("H:/trails.txt")
+	file = open("/MYPTrails-webpage/index.html", "w")
+	trails = read_trails("trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
     <head>
