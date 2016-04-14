@@ -32,42 +32,49 @@ def read_trails(path):
 		trails.append(dictionary)
 		g = text.find('>',g+1)
 	return trails
+    #------------------------------------------------#
 	#Find trails that meet certain properties
 def find_prop(attr, prop):
     trails = read_trails('trails.txt')
+    filtered = []
     for i in trails:
         if i[attr] == prop:
-            print(i['Name'])
+            filtered.append(i["Name"])
+    return filtered
 def find_length():
     trails = read_trails("trails.txt")
-    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+")
+    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     validrange=["<5","5-10","10-15","15-20","20+"]
+    filtered=[]
     while mirange not in validrange:
-        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+")  
+        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     for q in trails:
-        length=float(i["Length"])
+        length=float(q["Length"])
         if mirange=="<5":
             if length<5:
-                print(length)
+                filtered.append(q["Name"])
         elif mirange=="5-10":
             if length>=5:
                 if length<=10:
-                    print(length)        
+                    filtered.append(q["Name"])
         elif mirange=="10-15":
             if length>=10:
                 if length<=15:
-                    print(length)
+                    filtered.append(q["Name"])
         elif mirange=="15-20":
             if length>=15:
                 if length<=20:
-                    print(length)           
-            
+                    filtered.append(q["Name"])
+
         else:
             if length>20:
-                print(length)
-#Adds results in webpage    
+                filtered.append(q["Name"])
+    return(filtered)
+#-------------------------------#
+#Adds results in webpage
 def add_results(result_list):
-	file = open("H:/webpage_template.html", "w")
+	file = open("/MYPTrails-webpage/index.html", "w")
+	trails = read_trails("H:/trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
     <head>
@@ -75,7 +82,7 @@ def add_results(result_list):
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <title>Trail Info</title>   
+        <title>Trail Info</title>
     </head>
     <!-------------------------Begin Body------------------------>
     <body>
@@ -89,23 +96,42 @@ def add_results(result_list):
         <br>
         <br>
         <br>''')
-	for i in add_results:
+	for i in result_list:
+		for j in trails:
+			if j["Name"] == i:
+				dicty = j
+				print(dicty)
 		file.write('''<div class="content">
         <table>
             <tr>''')
-		file.write('''<td><b>Trail Name</b></td>''')
-		name = i['Name']
+		file.write('''<td><b>Trail Name</b></td>
+''')
+		name = dicty['Name']
 		name_of_trail = '<td>'+name+'</td>'
 		file.write(name_of_trail)
 		file.write('''</tr>
             <tr>
-            <td><b>Trail Length</b></td>''')
-		
-		<td>[Length of Trail]</td>
+            <td><b>Trail Length in miles</b></td>
+            ''')
+		length = '<td>'+dicty['Length']+'</td>'
+		file.write(length)
+		file.write('''
             </tr>
             <tr>
-	file.close()        
-        
-        
-        
-        
+            ''')
+		file.write('''<td><b>Trail Difficulty</b></td>''')
+		difficulty = '<td>'+dicty['Difficulty']+'<td>'
+		file.write(difficulty)
+		file.write('''
+	    </tr>
+            <tr>
+            <td><b>About the Trail</b></td>
+            ''')
+		file.write('<td>'+dicty['Notes']+'/<td>')
+		file.write('''</tr>
+            </table>
+        </div>''')
+	file.write('''
+   </body>
+</html>''')
+	file.close()
