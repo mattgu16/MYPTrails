@@ -6,8 +6,8 @@ Page Appearance: Modern/Contemporary
 */
 /* Body */
 body {
-    background-color: #000000;
-    background-image:url(images/escheresque_dark.png);
+    background-color: #7d7d7d;
+    background-image:url(images/banner.png);
     font-family: 'Lato', sans-serif;
     width: 960px;
     margin: auto;
@@ -106,7 +106,7 @@ div.content {
     color: #fff;
     background-color:rgba(255,255,255,0.1);
     text-align: center; 
-    width: 50%;
+    width: 85%;
     vertical-align: middle;
     padding: 5%;
     margin: auto;
@@ -166,7 +166,7 @@ div.content-header-wide {
     font-size: 150%;
     background-color:rgba(255,255,255,0.1);
     text-align: center; 
-    width: 50%;
+    width: 70%;
     padding: 3px;
     margin: auto;
     border-radius: 10px;
@@ -193,4 +193,7 @@ tr {
 }
 td {
     padding-right: 30px;
+}
+th {
+    width: 60%;
 }
