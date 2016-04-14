@@ -74,6 +74,7 @@ def find_length():
 #Adds results in webpage    
 def add_results(result_list):
 	file = open("H:/webpage_template.html", "w")
+	trails = read_trails("H:/trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
     <head>
@@ -95,20 +96,44 @@ def add_results(result_list):
         <br>
         <br>
         <br>''')
-	for i in add_results:
+	for i in result_list:
+		for j in trails:
+			if j["Name"] == i:
+				dicty = j
+				print(dicty)
 		file.write('''<div class="content">
         <table>
             <tr>''')
-		file.write('''<td><b>Trail Name</b></td>''')
-		name = i['Name']
+		file.write('''<td><b>Trail Name</b></td>
+''')
+		name = dicty['Name']
 		name_of_trail = '<td>'+name+'</td>'
 		file.write(name_of_trail)
 		file.write('''</tr>
             <tr>
-            <td><b>Trail Length</b></td>''')
-		
-		<td>[Length of Trail]</td>
+            <td><b>Trail Length</b></td>
+            ''')
+		length = '<td>'+dicty['Length']+'</td>'
+		file.write(length)
+		file.write('''
             </tr>
             <tr>
-	file.close()      
+            ''')
+		file.write('''<td><b>Trail Difficulty</b></td>''')
+		difficulty = '<td>'+dicty['Difficulty']+'<td>'
+		file.write(difficulty)
+		file.write('''
+	    </tr>
+            <tr>
+            <td><b>About the Trail</b></td>
+            ''')
+		file.write('<td>'+dicty['Notes']+'/<td>')
+		file.write('''</tr>
+            </table>
+        </div>''')
+	file.write('''
+   </body>
+</html>''')
+	file.close()
+  
                 
