@@ -1,4 +1,8 @@
-language: html
-html:
-  - 5
-sudo: required
+language: python
+python:
+  - "3.2"
+sudo: required  
+# command to install dependencies
+# install: "pip install -r requirements.txt"
+# command to run tests
+script: nosetests
