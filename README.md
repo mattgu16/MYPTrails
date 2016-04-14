@@ -14,5 +14,5 @@ _Prerequisites: This project requires you to have Python installed on your compu
 4. Run main.py
 
 ###Notes
-- This project _will_ be able to open your default browser to display filtered results. Please make sure your default browser supports HTML5.
+- This project _will_ be able to open your default browser to display filtered results. Please make sure your default browser is NOT Internet Explorer.
 - This version of the project is in alpha, and thus is unstable. Please use this with a grain of salt.
