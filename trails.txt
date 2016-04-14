@@ -1,6 +1,6 @@
 >Billy Goat Trail
 Where: Central Maryland
-Length: 4.7 miles to 7.3 miles (with towpath)
+Length: 7.3
 Difficulty: Difficult
 Notes:
 In Potomac, MD.
@@ -12,7 +12,7 @@ Source: https://alltrails.com/trail/us/maryland/billy-goat-trail, https://en.wik
 
 >Sugarloaf Mountain: Blue Trail Loop
 Where: Central Maryland
-Length: 5.4 miles
+Length: 5.4
 Difficulty: Moderate
 Notes:
 Near Dickerson, MD
@@ -23,7 +23,7 @@ Source: https://alltrails.com/trail/us/maryland/blue-trail-loop
 
 >Glen Artney / Avalon / Orange Grove / Hilton Areas Trails
 Where: Baltimore
-Length: 5.8 miles
+Length: 5.8
 Difficulty: Moderate
 Notes:
 At Patapsco Valley State Park near Baltimore, MD
@@ -34,7 +34,7 @@ Source: http://alltrails.com/trail/us/maryland/patapsco-valley-state-park-glen-a
 
 >White Trail
 Where: Northern Maryland
-Length: 3.4 miles
+Length: 3.4
 Difficulty: Moderate
 Notes:
 near Jarrettsville, MD
@@ -46,7 +46,7 @@ Source: https://alltrails.com/trail/us/maryland/white-trail-loop
 
 >Jerusalem Village Trail with Jericho Covered Bridge Trail
 Where: Northern Maryland
-Length: 4.3 miles
+Length: 4.3
 Difficulty: Easy
 Notes:
 Accessible all year round and primarily used for hiking and mountain biking
@@ -56,7 +56,7 @@ Source: http://dnr2.maryland.gov/publiclands/Pages/central/gunpowder.aspx
 
 >Switchback Trail
 Where: Central Maryland
-Length: 3.8 miles
+Length: 3.8
 Difficulty: Easy
 Notes: 
 Patapsco State Park near Marriottsville, MD
@@ -67,7 +67,7 @@ Source: http://alltrails.com/trail/us/maryland/switchback-trail-in-patapsco-stat
 
 >C & O  Canal Towpath Trail
 Where: Central Maryland
-Length: 187 miles
+Length: 187
 Difficulty: Moderate
 Notes: 
 Chesapeake and Ohio Canal National Park
@@ -78,8 +78,8 @@ Source: http://www.everytrail.com/guide/c-amp-o-canal-towpath-trail-section-2
 
 >Appalachian Trail: Annapolis Rock
 Where: Northern Maryland
+Length: 2.2
 Difficulty: Moderate
-Length: 2.2 miles
 Notes:
 One-quarter mile east of Greenbrier on Route 40
 Offers an amazing view of Greenbrier Lake and Cumberland Valley from “Annapolis rock”
@@ -91,7 +91,7 @@ Source: http://dnr2.maryland.gov/publiclands/Pages/at.aspx
 
 >Catoctin Mountain Park Circuit
 Where: Northern Maryland
-Length: 9.4 miles
+Length: 9.4
 Difficulty: Difficult
 Notes:
 Catoctin Mountain National Park
@@ -103,7 +103,7 @@ Source: http://www.everytrail.com/guide/catoctin-mountain-park-circuit
 
 >Appalachian Trail: Weverton Cliffs
 Where: Northern Maryland
-Length: 6 miles
+Length: 6
 Difficulty: Difficult
 Notes: 
 Gathland State Park
@@ -114,7 +114,7 @@ Source: http://dnr2.maryland.gov/publiclands/Pages/at.aspx, http://alltrails.com
 
 >Appalachian Trail: Washington Monument 
 Where: Northern Maryland
-Length: 3 miles
+Length: 3
 Difficulty: Moderate
 Notes:
 One-quarter mile east of Greenbrier on Route 40
@@ -124,7 +124,7 @@ Source: http://dnr2.maryland.gov/publiclands/Pages/at.aspx
 
 >White Banks Trail
 Where: Eastern Maryland
-Length: 3 miles
+Length: 3
 Difficulty: Difficult
 Notes:
 Elk Neck State Park
@@ -133,7 +133,7 @@ Source: http://www.adventuresomehiker.com/2010/08/elk-neck-state-park-white-bank
 
 >Union Mills Hike
 Where: Northern Maryland
-Length: 7 miles
+Length: 7
 Difficulty: Difficult
 Notes: 
 Advocates Choice, MD
@@ -144,7 +144,7 @@ Source: http://www.everytrail.com/guide/union-mills-hike
 
 >Soldier's Delight-Serpentine Trail
 Where: Northern Maryland
-Length: 2.3 miles
+Length: 2.3
 Difficulty: Moderate
 Notes: 
 Liberty Reservoir Park near Owings Mill, MD
