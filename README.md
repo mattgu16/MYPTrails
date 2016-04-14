@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-Trails
 =======
 Trails ![Build Status] (https://travis-ci.org/mattgu16/MYPTrails.svg?branch=code)
->>>>>>> origin/code
 ============
 Maryland Hiking Trail Filter
 
@@ -15,11 +11,4 @@ _Prerequisites: This project requires you to have Python installed on your compu
 1. [Download the file folder](https://github.com/mattgu16/MYPTrails/releases/tag/0.0.0-alpha).
 2. Unzip the folder with third party software (or Windows default extracting).
 3. **Remember to keep all of the files in the same folder.**
-<<<<<<< HEAD
-4. Run file1.py.
-=======
-
->>>>>>> master
-=======
 4. Run file1.py
->>>>>>> origin/code
