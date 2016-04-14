@@ -32,6 +32,7 @@ def read_trails(path):
 		trails.append(dictionary)
 		g = text.find('>',g+1)
 	return trails
+    #------------------------------------------------#
 	#Find trails that meet certain properties
 def find_prop(attr, prop):
     trails = read_trails('trails.txt')
@@ -40,31 +41,34 @@ def find_prop(attr, prop):
             print(i['Name'])
 def find_length():
     trails = read_trails("trails.txt")
-    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+")
+    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     validrange=["<5","5-10","10-15","15-20","20+"]
+    filtered=[]
     while mirange not in validrange:
-        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+")  
+        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")  
     for q in trails:
-        length=float(i["Length"])
+        length=float(q["Length"])
         if mirange=="<5":
             if length<5:
-                print(length)
+                filtered.append(q["Name"])
         elif mirange=="5-10":
             if length>=5:
                 if length<=10:
-                    print(length)        
+                    filtered.append(q["Name"])      
         elif mirange=="10-15":
             if length>=10:
                 if length<=15:
-                    print(length)
+                    filtered.append(q["Name"])
         elif mirange=="15-20":
             if length>=15:
                 if length<=20:
-                    print(length)           
+                    filtered.append(q["Name"])        
             
         else:
             if length>20:
-                print(length)
+                filtered.append(q["Name"])
+    return(filtered)
+#-------------------------------#
 #Adds results in webpage    
 def add_results(result_list):
 	file = open("H:/webpage_template.html", "w")
@@ -104,8 +108,5 @@ def add_results(result_list):
 		<td>[Length of Trail]</td>
             </tr>
             <tr>
-	file.close()        
-        
-        
-        
-        
+	file.close()      
+                
