@@ -40,14 +40,14 @@ def find_prop(attr, prop):
     for i in trails:
         if i[attr] == prop:
             filtered.append(i["Name"])
-    return filtered        
+    return filtered
 def find_length():
     trails = read_trails("trails.txt")
     mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     validrange=["<5","5-10","10-15","15-20","20+"]
     filtered=[]
     while mirange not in validrange:
-        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")  
+        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     for q in trails:
         length=float(q["Length"])
         if mirange=="<5":
@@ -56,7 +56,7 @@ def find_length():
         elif mirange=="5-10":
             if length>=5:
                 if length<=10:
-                    filtered.append(q["Name"])      
+                    filtered.append(q["Name"])
         elif mirange=="10-15":
             if length>=10:
                 if length<=15:
@@ -64,14 +64,14 @@ def find_length():
         elif mirange=="15-20":
             if length>=15:
                 if length<=20:
-                    filtered.append(q["Name"])        
-            
+                    filtered.append(q["Name"])
+
         else:
             if length>20:
                 filtered.append(q["Name"])
     return(filtered)
 #-------------------------------#
-#Adds results in webpage    
+#Adds results in webpage
 def add_results(result_list):
 	file = open("/MYPTrails-webpage/index.html", "w")
 	trails = read_trails("trails.txt")
@@ -80,9 +80,10 @@ def add_results(result_list):
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <title>Trail Info</title>   
+        <title>Trail Info</title>
     </head>
     <!-------------------------Begin Body------------------------>
     <body>
@@ -111,7 +112,7 @@ def add_results(result_list):
 		file.write(name_of_trail)
 		file.write('''</tr>
             <tr>
-            <td><b>Trail Length</b></td>
+            <td><b>Trail Length in miles</b></td>
             ''')
 		length = '<td>'+dicty['Length']+'</td>'
 		file.write(length)
@@ -135,5 +136,3 @@ def add_results(result_list):
    </body>
 </html>''')
 	file.close()
-  
-                
