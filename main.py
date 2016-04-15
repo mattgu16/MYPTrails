@@ -1,4 +1,15 @@
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
+def main():
+        print("Would you like to search by length, by location or by difficulty?")
+        a=input("L for Length,  O for location, D for difficulty:  ")
+        if a=="L":
+                find_length()
+        elif a="O":
+                f=input("Choose one: Northern Maryland, Central Maryland, Baltimore, Southern Maryland, Western Maryland, Eastern Shore:  ")
+                find_prop("Where",f)
+        else:
+                p=input("Choose one: Easy, Moderate, Difficult:  ")
+                find_prop("Difficulty",p)
 def read_trails(path):
 	file = open(path, encoding="utf8")
 	text = file.read()
@@ -45,7 +56,7 @@ def find_length():
     trails = read_trails("trails.txt")
     mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     validrange=["<5","5-10","10-15","15-20","20+"]
-    filtered=[]
+    global filtered=[]
     while mirange not in validrange:
         mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
     for q in trails:
