@@ -73,14 +73,14 @@ def find_length():
 #-------------------------------#
 #Adds results in webpage
 def add_results(result_list):
-	file = open("/MYPTrails-webpage/index.html", "w")
+	file = open("MYPTrails-webpage\index.html", "w")
 	trails = read_trails("trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" type="text/css" />
-        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ > 
+        <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Trail Info</title>
@@ -128,7 +128,7 @@ def add_results(result_list):
             <tr>
             <td><b>About the Trail</b></td>
             ''')
-		file.write('<td>'+dicty['Notes']+'/<td>')
+		file.write('<td>'+dicty['Notes']+'</td>')
 		file.write('''</tr>
             </table>
         </div>''')
