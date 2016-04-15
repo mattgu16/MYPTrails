@@ -80,6 +80,7 @@ def add_results(result_list):
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Trail Info</title>
