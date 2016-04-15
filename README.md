@@ -14,4 +14,4 @@ _Prerequisites: This project requires you to have Python installed on your compu
 
 ###Notes
 - This project _will_ be able to open your default browser to display filtered results. Please make sure your default browser is NOT Internet Explorer.
-- This version of the project is in alpha, and thus is unstable. Please use this with a grain of salt.
+- This version of the project is in alpha, and thus is unstable. By the way, there is no current user interface so yeah.  We will keep you posted.
