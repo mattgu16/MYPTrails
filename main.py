@@ -4,7 +4,7 @@ def main():
         a=input("L for Length,  O for location, D for difficulty:  ")
         if a=="L":
                 find_length()
-        elif a="O":
+        elif a=="O":
                 f=input("Choose one: Northern Maryland, Central Maryland, Baltimore, Southern Maryland, Western Maryland, Eastern Shore:  ")
                 find_prop("Where",f)
         else:
