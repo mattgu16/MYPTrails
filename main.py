@@ -1,4 +1,22 @@
+
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
+def main():
+        print("Would you like to search by length, by location or by difficulty?")
+        print("")
+        a=input("L for Length,  O for location, D for difficulty: ")
+        print("")
+        validfilter=["L","O","D"]
+        while a not in validfilter:
+                a=input("L for Length,  O for location, D for difficulty: ")
+                print("")
+        if a.upper()=="L":
+                find_length()
+        elif a.upper()=="O":
+                f=input("Choose one: Northern Maryland, Central Maryland, Baltimore, Southern Maryland, Western Maryland, Eastern Shore:  ")
+                find_prop("Where",f)
+        else:
+                p=input("Choose one: Easy, Moderate, Difficult:  ")
+                find_prop("Difficulty",p)
 def read_trails(path):
 	file = open(path, encoding="utf8")
 	text = file.read()
@@ -33,54 +51,16 @@ def read_trails(path):
 		g = text.find('>',g+1)
 	return trails
     #------------------------------------------------#
-	#Find trails that meet certain properties
-def find_prop(attr, prop):
-    trails = read_trails('trails.txt')
-    filtered = []
-    for i in trails:
-        if i[attr] == prop:
-            filtered.append(i["Name"])
-    return filtered
-def find_length():
-    trails = read_trails("trails.txt")
-    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
-    validrange=["<5","5-10","10-15","15-20","20+"]
-    filtered=[]
-    while mirange not in validrange:
-        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
-    for q in trails:
-        length=float(q["Length"])
-        if mirange=="<5":
-            if length<5:
-                filtered.append(q["Name"])
-        elif mirange=="5-10":
-            if length>=5:
-                if length<=10:
-                    filtered.append(q["Name"])
-        elif mirange=="10-15":
-            if length>=10:
-                if length<=15:
-                    filtered.append(q["Name"])
-        elif mirange=="15-20":
-            if length>=15:
-                if length<=20:
-                    filtered.append(q["Name"])
-
-        else:
-            if length>20:
-                filtered.append(q["Name"])
-    return(filtered)
-#-------------------------------#
 #Adds results in webpage
 def add_results(result_list):
-	file = open("/MYPTrails-webpage/index.html", "w")
+	file = open("MYPTrails-webpage\index.html", "w")
 	trails = read_trails("trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" type="text/css" />
-        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ > 
+        <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title>Trail Info</title>
@@ -128,11 +108,53 @@ def add_results(result_list):
             <tr>
             <td><b>About the Trail</b></td>
             ''')
-		file.write('<td>'+dicty['Notes']+'/<td>')
+		file.write('<td>'+dicty['Notes']+'</td>')
 		file.write('''</tr>
             </table>
-        </div>''')
+        </div><br><br><br>''')
 	file.write('''
    </body>
 </html>''')
 	file.close()
+	#---------------------------------------#
+	#Find trails that meet certain properties
+def find_prop(attr, prop):
+    trails = read_trails('trails.txt')
+    global filtered
+    filtered = []
+    for i in trails:
+        if i[attr] == prop:
+            filtered.append(i["Name"])
+    add_results(filtered)                 
+def find_length():
+    trails = read_trails("trails.txt")
+    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
+    validrange=["<5","5-10","10-15","15-20","20+"]
+    global filtered
+    filtered=[]
+    while mirange not in validrange:
+        mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
+    for q in trails:
+        length=float(q["Length"])
+        if mirange=="<5":
+            if length<5:
+                filtered.append(q["Name"])
+        elif mirange=="5-10":
+            if length>=5:
+                if length<=10:
+                    filtered.append(q["Name"])
+        elif mirange=="10-15":
+            if length>=10:
+                if length<=15:
+                    filtered.append(q["Name"])
+        elif mirange=="15-20":
+            if length>=15:
+                if length<=20:
+                    filtered.append(q["Name"])
+
+        else:
+            if length>20:
+                filtered.append(q["Name"])
+        add_results(filtered)    
+#-------------------------------#
+main()
