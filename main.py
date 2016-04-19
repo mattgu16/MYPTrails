@@ -1,4 +1,5 @@
-
+import webbrowser
+import os
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def main():
         print("Would you like to search by length, by location or by difficulty?")
@@ -53,7 +54,7 @@ def read_trails(path):
     #------------------------------------------------#
 #Adds results in webpage
 def add_results(result_list):
-	file = open("MYPTrails-webpage\index.html", "w")
+	file = open("Trails-webpage\index.html", "w")
 	trails = read_trails("trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
@@ -156,5 +157,7 @@ def find_length():
             if length>20:
                 filtered.append(q["Name"])
         add_results(filtered)    
-#-------------------------------#
+#---------------Running Program----------------#
 main()
+#--------------Opens Webpage-----------------#
+webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
