@@ -53,7 +53,7 @@ def read_trails(path):
     #------------------------------------------------#
 #Adds results in webpage
 def add_results(result_list):
-	file = open("MYPTrails-webpage\index.html", "w")
+	file = open("Trails-webpage\index.html", "w")
 	trails = read_trails("trails.txt")
 	file.write('''<!DOCTYPE html>
 <html>
