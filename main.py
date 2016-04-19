@@ -82,7 +82,6 @@ def add_results(result_list):
 		for j in trails:
 			if j["Name"] == i:
 				dicty = j
-				print(dicty)
 		file.write('''<div class="content">
         <table>
             <tr>''')
