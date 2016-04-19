@@ -1,4 +1,4 @@
-Trails ![Build Status] (https://travis-ci.org/mattgu16/MYPTrails.svg?branch=code)
+Trails ![Build Status] (https://travis-ci.org/mattgu16/Trails.svg?branch=master)
 ============
 Maryland Hiking Trail Filter
 
