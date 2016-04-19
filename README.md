@@ -1,6 +1,6 @@
 Trails ![Build Status] (https://travis-ci.org/mattgu16/Trails.svg?branch=master)
 ============
-####Maryland Hiking Trail Filter####
+#####Maryland Hiking Trail Filter#####
 
 This Python project allows you to search through (most) hiking trails in the state of Maryland through a variety of attributes.
 
