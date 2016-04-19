@@ -157,7 +157,7 @@ def find_length():
             if length>20:
                 filtered.append(q["Name"])
         add_results(filtered)    
-#-------------------------------#
+#---------------Running Program----------------#
 main()
-#-------------------------------#
+#--------------Opens Webpage-----------------#
 webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
