@@ -1,4 +1,5 @@
-
+import webbrowser
+import os
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def main():
         print("Would you like to search by length, by location or by difficulty?")
@@ -158,3 +159,5 @@ def find_length():
         add_results(filtered)    
 #-------------------------------#
 main()
+#-------------------------------#
+webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
