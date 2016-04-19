@@ -26,7 +26,7 @@ Where: Baltimore
 Length: 5.8
 Difficulty: Moderate
 Notes:
-At Patapsco Valley State Park near Baltimore, MD.
+Located at Patapsco Valley State Park near Baltimore, MD.
 A moderately trafficked trail that runs along a rushing river with small waterfalls.
 Accessible from June to October.  Dogs must be kept on a leash.
 Excellent for trail biking.
@@ -37,7 +37,7 @@ Where: Northern Maryland
 Length: 3.4
 Difficulty: Moderate
 Notes:
-near Jarrettsville, MD
+Located near Jarrettsville, MD.
 A moderately trafficked trail in heavily forested area with stunning vistas of and from two large rock outcrops called “The King and Queen Seat” and a small river with waterfalls.
 Accessible from October to November.
 Dogs must be kept on a leash.
@@ -59,7 +59,7 @@ Where: Central Maryland
 Length: 3.8
 Difficulty: Easy
 Notes:
-Patapsco State Park near Marriottsville, MD.
+Located near Patapsco State Park near Marriottsville, MD.
 Moderately human trafficked trail that go through forested area with a rushing river with waterfalls.
 Accessible throughout the year.
 Dogs must be kept on leash.
@@ -70,9 +70,9 @@ Where: Central Maryland
 Length: 187
 Difficulty: Moderate
 Notes:
-Chesapeake and Ohio Canal National Park.
+Located at Chesapeake and Ohio Canal National Park.
 Bike and Dog Friendly.
-Trail is the towpath for the canal.
+Trail is the towpath for the C&O canal.
 Arrive Prepared.
 Source: http://www.everytrail.com/guide/c-amp-o-canal-towpath-trail-section-2
 
@@ -81,7 +81,7 @@ Where: Northern Maryland
 Length: 2.2
 Difficulty: Moderate
 Notes:
-One-quarter mile east of Greenbrier on Route 40.
+Located one-quarter mile east of Greenbrier on Route 40.
 Offers an amazing view of Greenbrier Lake and Cumberland Valley from “Annapolis rock”.
 Continue north one mile to Black Rock, which offers a westward view of the valley.
 Ascent is 1700 ft.
@@ -94,7 +94,7 @@ Where: Northern Maryland
 Length: 9.4
 Difficulty: Difficult
 Notes:
-Catoctin Mountain National Park.
+Located at Catoctin Mountain National Park.
 Offers scenic views of Cunningham Falls, Hog Rock, Blue Ridge Summit Overlook, Thurmont Vista, Wolf Rock, Chimney Rock, and Hunting Creek.
 Dog Friendly.
 Many sections are rocky and ascent is 1500 ft.
@@ -106,7 +106,7 @@ Where: Northern Maryland
 Length: 6
 Difficulty: Difficult
 Notes:
-Gathland State Park.
+Located at Gathland State Park.
 Offers a view of the Potomac River and the area around Harper’s Ferry, West Virginia.
 Accessible all-year round.
 Dogs must be kept on leash.
@@ -117,7 +117,7 @@ Where: Northern Maryland
 Length: 3
 Difficulty: Moderate
 Notes:
-One-quarter mile east of Greenbrier on Route 40.
+Located one-quarter mile east of Greenbrier on Route 40.
 Offers views of the first monument to George Washington and the surrounding Cumberland Valley from 1600 ft above.
 Take blue-blazed trail from the parking lot to the white-blazed trail.  Turn left to go south.  Cross bridge over I-70.
 Source: http://dnr2.maryland.gov/publiclands/Pages/at.aspx
@@ -127,7 +127,7 @@ Where: Eastern Maryland
 Length: 3
 Difficulty: Difficult
 Notes:
-Elk Neck State Park.
+Located at Elk Neck State Park.
 Offers views of the Chesapeake Bay from the stunning white clay cliffs.
 Source: http://www.adventuresomehiker.com/2010/08/elk-neck-state-park-white-banks-trail.html, http://dnr2.maryland.gov/publiclands/Pages/central/elkneck.aspx
 
@@ -136,7 +136,7 @@ Where: Northern Maryland
 Length: 7
 Difficulty: Difficult
 Notes:
-Advocates Choice, MD.
+Located at Advocates Choice, MD.
 Rugged Hike, goes over creeks.
 Dirt, crushed rock trail.
 Steep plunges.
@@ -147,7 +147,7 @@ Where: Northern Maryland
 Length: 2.3
 Difficulty: Moderate
 Notes:
-Liberty Reservoir Park near Owings Mill, MD.
+Located at Liberty Reservoir Park near Owings Mill, MD.
 A prairie like environment that can be found in the Midwest.
 Has a lot of ticks, be prepared!
 Moderately Trafficked and dog-friendly.
