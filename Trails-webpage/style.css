@@ -39,7 +39,7 @@ text-align: center;
 #navcontainer ul li a
 {
 text-decoration: none;
-padding: .2em 1em;
+padding: .0125em .0625em;
 color: #fff;
 background-color: rgba(170, 57, 57,0.5);
 }
