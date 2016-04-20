@@ -19,44 +19,44 @@ def main():
                 p=input("Choose one: Easy, Moderate, Difficult:  ")
                 find_prop("Difficulty",p)
 def read_trails(path):
-	file = open(path, encoding="utf8")
-	text = file.read()
-	trails = []
-	g = text.find('>')
-	while g != -1:
-		dictionary = {}
-		name = text[g+1:text.find('\n',g)]
-		dictionary['Name'] = name
-		g = text.find('Where:',g+1)
-		where = text[g+7: text.find('\n', g+1)]
-		dictionary['Where'] = where
-		g = text.find('Length:',g+1)
-		length = text[g+8: text.find('\n', g+1)]
-		dictionary['Length'] = length
-		g = text.find('Difficulty:',g+1)
-		difficulty = text[g+12: text.find('\n', g+1)]
-		dictionary['Difficulty'] = difficulty
-		g = text.find('Notes:',g+1)
-		notes = text[g+6:text.find('Source:',g+1)]
-		dictionary['Notes'] = notes
-		g = text.find('Source:', g+1)
-		comma = text.find(',', g+1)
-		newline = text.find('\n',g)
-		source = ''
-		if newline >= comma:
-			source = [text[g+8: comma], text[comma+2: newline]]
-		if newline <= comma:
-			source = [text[g+8: text.find('\n', g+1)]]
-		dictionary['Sources'] = source
-		trails.append(dictionary)
-		g = text.find('>',g+1)
-	return trails
+        file = open(path, encoding="utf8")
+        text = file.read()
+        trails = []
+        g = text.find('>')
+        while g != -1:
+                dictionary = {}
+                name = text[g+1:text.find('\n',g)]
+                dictionary['Name'] = name
+                g = text.find('Where:',g+1)
+                where = text[g+7: text.find('\n', g+1)]
+                dictionary['Where'] = where
+                g = text.find('Length:',g+1)
+                length = text[g+8: text.find('\n', g+1)]
+                dictionary['Length'] = length
+                g = text.find('Difficulty:',g+1)
+                difficulty = text[g+12: text.find('\n', g+1)]
+                dictionary['Difficulty'] = difficulty
+                g = text.find('Notes:',g+1)
+                notes = text[g+6:text.find('Source:',g+1)]
+                dictionary['Notes'] = notes
+                g = text.find('Source:', g+1)
+                comma = text.find(',', g+1)
+                newline = text.find('\n',g)
+                source = ''
+                if newline >= comma:
+                        source = [text[g+8: comma], text[comma+2: newline]]
+                if newline <= comma:
+                        source = [text[g+8: text.find('\n', g+1)]]
+                dictionary['Sources'] = source
+                trails.append(dictionary)
+                g = text.find('>',g+1)
+        return trails
     #------------------------------------------------#
 #Adds results in webpage
 def add_results(result_list):
-	file = open("Trails-webpage\index.html", "w")
-	trails = read_trails("trails.txt")
-	file.write('''<!DOCTYPE html>
+        file = open("Trails-webpage\index.html", "w")
+        trails = read_trails("trails.txt")
+        file.write('''<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -78,47 +78,55 @@ def add_results(result_list):
         <br>
         <br>
         <br>''')
-	for i in result_list:
-		for j in trails:
-			if j["Name"] == i:
-				dicty = j
-				print(dicty)
-		file.write('''<div class="content">
+        for i in result_list:
+                for j in trails:
+                        if j["Name"] == i:
+                                dicty = j
+                file.write('''<div class="content">
         <table>
             <tr>''')
-		file.write('''<td><b>Trail Name</b></td>
+                file.write('''<td><b>Trail Name</b></td>
 ''')
-		name = dicty['Name']
-		name_of_trail = '<td>'+name+'</td>'
-		file.write(name_of_trail)
-		file.write('''</tr>
+                name = dicty['Name']
+                name_of_trail = '<td>'+name+'</td>'
+                file.write(name_of_trail)
+                file.write('''</tr>
             <tr>
             <td><b>Trail Length in miles</b></td>
             ''')
-		length = '<td>'+dicty['Length']+'</td>'
-		file.write(length)
-		file.write('''
+                length = '<td>'+dicty['Length']+'</td>'
+                file.write(length)
+                file.write('''
             </tr>
             <tr>
             ''')
-		file.write('''<td><b>Trail Difficulty</b></td>''')
-		difficulty = '<td>'+dicty['Difficulty']+'<td>'
-		file.write(difficulty)
-		file.write('''
-	    </tr>
+                file.write('''<td><b>Trail Difficulty</b></td>''')
+                difficulty = '<td>'+dicty['Difficulty']+'<td>'
+                file.write(difficulty)
+                file.write('''
+            </tr>
             <tr>
             <td><b>About the Trail</b></td>
             ''')
-		file.write('<td>'+dicty['Notes']+'</td>')
-		file.write('''</tr>
-            </table>
+                file.write('<td>'+dicty['Notes']+'</td></tr>')
+                file.write('''<tr>
+<td><b>External Links</b></td>''')
+                sources = ''
+                file.write('<td>')
+                file.write('''<div id="navcontainer"><ul>''')
+                for e in dicty['Sources']:
+                        href = '<li>'+'<a href=' + e + '>' + e + '</a>'+'</li>'+'<br>'
+                        file.write(href)
+                file.write('</ul></div></td>')
+                file.write('''</tr>''')
+                file.write(''' </table>
         </div><br><br><br>''')
-	file.write('''
+        file.write('''
    </body>
 </html>''')
-	file.close()
-	#---------------------------------------#
-	#Find trails that meet certain properties
+        file.close()
+        #---------------------------------------#
+        #Find trails that meet certain properties
 def find_prop(attr, prop):
     trails = read_trails('trails.txt')
     global filtered
