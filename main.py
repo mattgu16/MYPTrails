@@ -1,5 +1,8 @@
 import webbrowser
 import os
+#--------------Opens Webpage-----------------#
+def openpage():
+        webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def main():
         print("Would you like to search by length, by location or by difficulty?")
@@ -18,6 +21,7 @@ def main():
         else:
                 p=input("Choose one: Easy, Moderate, Difficult:  ")
                 find_prop("Difficulty",p)
+        openpage()        
 def read_trails(path):
         file = open(path, encoding="utf8")
         text = file.read()
@@ -49,7 +53,7 @@ def read_trails(path):
                         source = [text[g+8: text.find('\n', g+1)]]
                 dictionary['Sources'] = source
                 trails.append(dictionary)
-                g = text.find('>',g+1)
+                g = text.find('>',g+1)        
         return trails
     #------------------------------------------------#
 #Adds results in webpage
@@ -64,6 +68,7 @@ def add_results(result_list):
         <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        
         <title>Trail Info</title>
     </head>
     <!-------------------------Begin Body------------------------>
@@ -78,6 +83,8 @@ def add_results(result_list):
         <br>
         <br>
         <br>''')
+        if result_list==[]:
+                file.write('''<br><br><br><center><div id="noshow"><a href="#"><b>There are no trails that match the selected filter.</b></a></div></center>''')
         for i in result_list:
                 for j in trails:
                         if j["Name"] == i:
@@ -115,7 +122,7 @@ def add_results(result_list):
                 file.write('<td>')
                 file.write('''<div id="navcontainer"><ul>''')
                 for e in dicty['Sources']:
-                        href = '<li>'+'<a href=' + e + '>' + e + '</a>'+'</li>'+'<br>'
+                        href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'+'<br>'
                         file.write(href)
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
@@ -164,8 +171,6 @@ def find_length():
         else:
             if length>20:
                 filtered.append(q["Name"])
-        add_results(filtered)    
+        add_results(filtered)       
 #---------------Running Program----------------#
 main()
-#--------------Opens Webpage-----------------#
-webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
