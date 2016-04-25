@@ -1,4 +1,4 @@
->Billy Goat Trail
+﻿>Billy Goat Trail
 Where: Central Maryland
 Length: 7.3
 Difficulty: Difficult
@@ -169,3 +169,12 @@ Difficulty: Moderate
 Notes:
 Family Friendly, Dog Friendly, Wheelchair Accessible, Biker Friendly
 Source: http://www.traillink.com/trail/torrey-c-brown-rail-trail.aspx
+
+>Blue Mash Nature Trail
+Where: Central Maryland
+Length: 5
+Difficulty: Easy
+Notes:
+Horseback Riding, Biking. 1.25 mi of the trail is for hikers only
+Source: http://www.montgomeryparks.org/PPSD/ParkTrails/trails_MAPS/blue_mash.shtm
+/,
