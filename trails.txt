@@ -1,4 +1,4 @@
->Billy Goat Trail
+﻿>Billy Goat Trail
 Where: Central Maryland
 Length: 7.3
 Difficulty: Difficult
@@ -177,3 +177,4 @@ Difficulty: Easy
 Notes:
 Horseback Riding, Biking. 1.25 mi of the trail is for hikers only
 Source: http://www.montgomeryparks.org/PPSD/ParkTrails/trails_MAPS/blue_mash.shtm
+/,
