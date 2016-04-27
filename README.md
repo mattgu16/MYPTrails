@@ -14,6 +14,7 @@ _Prerequisites: This project **recommends** you to have Python installed on your
 4. Right click main.py.
 5. Select "Edit with IDLE".
 6. Press F5.
+
 =====
 ####Using Command Prompt
 1. [Download the latest release](https://github.com/mattgu16/Trails/releases/).
