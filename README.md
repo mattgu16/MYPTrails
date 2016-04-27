@@ -4,7 +4,7 @@ Trails ![Build Status] (https://travis-ci.org/mattgu16/Trails.svg?branch=master)
 
 This Python project allows you to search through (most) hiking trails in the state of Maryland through a variety of attributes.
 
-###Usage
+##Usage
 _Prerequisites: This project **recommends** you to have Python installed on your computer. Download at [http://python.org](https://www.python.org/downloads/)._
 
 ####Using Python
