@@ -177,4 +177,37 @@ Difficulty: Easy
 Notes:
 Horseback Riding, Biking. 1.25 mi of the trail is for hikers only
 Source: http://www.montgomeryparks.org/PPSD/ParkTrails/trails_MAPS/blue_mash.shtm
-/,
+
+>Western Maryland Rail Trail
+Where: Western Maryland
+Length: 23
+Difficulty: Easy
+Notes:
+Divided into 3 sections.  The first section about 10 miles, from Big Pool to Hancock and goes through scenic and
+historic sites.  The second section is the most beautiful and remote ones as it offers scenic views of mountainous
+terrains and the Potomac River.  The third section is 2.5 miles and goes through many historic sites.
+Source: http://dnr2.maryland.gov/publiclands/Pages/western/wmrt.aspx
+
+>Three Notch Trail
+Where: Southern Maryland
+Length: 8
+Difficulty: Moderate
+Notes:
+This trail is a work-in-progress, and when its finished it will be 28 miles long, along an abandoned Washington.
+Source: http://www.traillink.com/trail/three-notch-trail.aspx
+
+>Red Trail at Calvert Cliffs State Park
+Where: Southern Maryland
+Length: 1.8
+Difficulty: Moderate
+Notes:
+Located in Calvert Cliffs State Park, this trail goes through marshy environments to reach a small beach surrounded by cliffs and the Cheasapeake Bay
+Source: http://dnr2.maryland.gov/publiclands/Pages/southern/calvertcliffs.aspx
+
+>Bell Island Trail
+Where: Eastern Shore
+Length: 1.2
+Difficulty: Easy
+Notes:
+Overlook spots at the marsh and on the riverfront are great places to rest and enjoy the sights and sounds of the wetlands and Wicomico River.
+Source: http://www.pembertonpark.org/,
