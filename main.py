@@ -124,7 +124,11 @@ def add_results(result_list):
                 file.write('<td>')
                 file.write('''<div id="navcontainer"><ul>''')
                 for e in dicty['Sources']:
-                        href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'+'<br>'
+                        if e=="":
+                                e="#"
+                                href = '<li>'+'<a href=' + e + ' target="_blank">' + "" + '</a>'+'</li>'
+                        else:
+                                href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'
                         file.write(href)
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
