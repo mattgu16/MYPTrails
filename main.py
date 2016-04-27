@@ -7,17 +7,19 @@ def openpage():
 def main():
         print("Would you like to search by length, by location or by difficulty?")
         print("")
-        a=input("L for Length,  O for location, D for difficulty: ")
+        a=input("L for Length,  O for Location, D for Difficulty, A for All Trails: ")
         print("")
-        validfilter=["L","O","D"]
+        validfilter=["L","O","D","A"]
         while a not in validfilter:
-                a=input("L for Length,  O for location, D for difficulty: ")
+                a=input("L for Length,  O for Location, D for Difficulty, A for All Trails: ")
                 print("")
         if a.upper()=="L":
                 find_length()
         elif a.upper()=="O":
                 f=input("Choose one: Northern Maryland, Central Maryland, Baltimore, Southern Maryland, Western Maryland, Eastern Shore:  ")
                 find_prop("Where",f)
+        elif a.upper()=="A":
+                find_all()
         else:
                 p=input("Choose one: Easy, Moderate, Difficult:  ")
                 find_prop("Difficulty",p)
@@ -122,7 +124,11 @@ def add_results(result_list):
                 file.write('<td>')
                 file.write('''<div id="navcontainer"><ul>''')
                 for e in dicty['Sources']:
-                        href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'+'<br>'
+                        if e=="":
+                                e="#"
+                                href = '<li>'+'<a href=' + e + ' target="_blank">' + "" + '</a>'+'</li>'
+                        else:
+                                href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'
                         file.write(href)
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
@@ -141,7 +147,14 @@ def find_prop(attr, prop):
     for i in trails:
         if i[attr] == prop:
             filtered.append(i["Name"])
-    add_results(filtered)                 
+    add_results(filtered)
+def find_all():
+    trails = read_trails('trails.txt')
+    global filtered
+    filtered = []
+    for i in trails:
+            filtered.append(i["Name"])
+    add_results(filtered)   
 def find_length():
     trails = read_trails("trails.txt")
     mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
