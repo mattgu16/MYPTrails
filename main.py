@@ -3,27 +3,28 @@ import os
 #--------------Opens Webpage-----------------#
 def openpage():
         webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
-#Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
+#Asks user how he/she wants to search up trails by
 def main():
         print("Would you like to search by length, by location or by difficulty?")
         print("")
-        a=input("L for Length,  O for Location, D for Difficulty, A for All Trails: ")
+        a=input("'L' for Length,  'O' for Location, 'D' for Difficulty, 'A' for All Trails: ").upper()
         print("")
         validfilter=["L","O","D","A"]
         while a not in validfilter:
-                a=input("L for Length,  O for Location, D for Difficulty, A for All Trails: ")
+                a=input("'L' for Length,  'O' for Location, 'D' for Difficulty, 'A' for All Trails: ").upper()
                 print("")
         if a.upper()=="L":
                 find_length()
         elif a.upper()=="O":
-                f=input("Choose one: Northern Maryland, Central Maryland, Baltimore, Southern Maryland, Western Maryland, Eastern Shore:  ")
+                f=input("Choose one: 'Northern Maryland', 'Central Maryland', 'Baltimore', 'Southern Maryland', 'Western Maryland', or 'Eastern Shore':  ")
                 find_prop("Where",f)
         elif a.upper()=="A":
                 find_all()
         else:
-                p=input("Choose one: Easy, Moderate, Difficult:  ")
+                p=input("Choose one: 'Easy', 'Moderate', 'Difficult':  ")
                 find_prop("Difficulty",p)
-        openpage()        
+        openpage()
+#Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def read_trails(path):
         file = open(path, encoding="utf8")
         text = file.read()
@@ -140,6 +141,7 @@ def add_results(result_list):
         file.close()
         #---------------------------------------#
         #Find trails that meet certain properties
+#Find trails that meet at certain difficulty or location
 def find_prop(attr, prop):
     trails = read_trails('trails.txt')
     global filtered
@@ -148,13 +150,15 @@ def find_prop(attr, prop):
         if i[attr] == prop:
             filtered.append(i["Name"])
     add_results(filtered)
+#Finds all trails
 def find_all():
     trails = read_trails('trails.txt')
     global filtered
     filtered = []
     for i in trails:
             filtered.append(i["Name"])
-    add_results(filtered)   
+    add_results(filtered)
+#Finds trails that meet a length
 def find_length():
     trails = read_trails("trails.txt")
     mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
@@ -187,3 +191,6 @@ def find_length():
         add_results(filtered)       
 #---------------Running Program----------------#
 main()
+print(" ")
+print(" ")
+print("Call 'main()' to run the program again")
