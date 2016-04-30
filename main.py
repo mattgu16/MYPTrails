@@ -170,7 +170,7 @@ def find_all():
 #Finds trails that meet a length
 def find_length():
     trails = read_trails("trails.txt")
-    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
+    mirange=input("Input a mile range: '<5', '5-10', '10-15', '15-20', 20+ => ")
     validrange=["<5","5-10","10-15","15-20","20+"]
     global filtered
     filtered=[]
