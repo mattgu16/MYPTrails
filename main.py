@@ -25,12 +25,14 @@ def main():
         if a.upper()=="L":
                 find_length()
         elif a.upper()=="O":
-                f=input("Choose one: 'Northern Maryland', 'Central Maryland', 'Baltimore', 'Southern Maryland', 'Western Maryland', or 'Eastern Shore':  ").upper()
+                f=input("Choose one: 'Northern Maryland', 'Central Maryland', 'Baltimore', 'Southern Maryland', 'Western Maryland', or 'Eastern Shore':  ")
+                f = f[0].upper() + f[1:].lower()
                 find_prop("Where",f)
         elif a.upper()=="A":
                 find_all()
         else:
-                p=input("Choose one: 'Easy', 'Moderate', 'Difficult':  ").upper()
+                p=input("Choose one: 'Easy', 'Moderate', 'Difficult':  ")
+                p = p[0].upper() + p[1:].lower()
                 find_prop("Difficulty",p)
         openpage()
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
@@ -203,3 +205,4 @@ main()
 print(" ")
 print(" ")
 print("Call 'main()' to run the program again")
+
