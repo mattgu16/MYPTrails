@@ -35,7 +35,7 @@ def main():
         openpage()
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def read_trails(path):
-        file = open(path, encoding="utf8")
+        file = open(path)
         text = file.read()
         trails = []
         g = text.find('>')
@@ -137,12 +137,9 @@ def add_results(result_list):
                 file.write('<td>')
                 file.write('''<div id="navcontainer"><ul>''')
                 for e in dicty['Sources']:
-                        if e=="":
-                                e="#"
-                                href = '<li>'+'<a href=' + e + ' target="_blank">' + "" + '</a>'+'</li>'
-                        else:
-                                href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'
-                        file.write(href)
+                        href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li><br>'
+                        if e != "":
+                                file.write(href)
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
                 file.write(''' </table>
@@ -173,7 +170,7 @@ def find_all():
 #Finds trails that meet a length
 def find_length():
     trails = read_trails("trails.txt")
-    mirange=input("Input a mile range: <5, 5-10, 10-15, 15-20, 20+ =>")
+    mirange=input("Input a mile range: '<5', '5-10', '10-15', '15-20', 20+ => ")
     validrange=["<5","5-10","10-15","15-20","20+"]
     global filtered
     filtered=[]
