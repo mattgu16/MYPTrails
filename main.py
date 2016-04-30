@@ -26,7 +26,14 @@ def main():
                 find_length()
         elif a.upper()=="O":
                 f=input("Choose one: 'Northern Maryland', 'Central Maryland', 'Baltimore', 'Southern Maryland', 'Western Maryland', or 'Eastern Shore':  ")
-                f = f[0].upper() + f[1:].lower()
+                if (' ' in f):
+                        space = f.split()
+                        f = ''
+                        for i in space:
+                                f = f + i[0].upper() + i[1:].lower() + ' '
+                        f = f[:-1]
+                else:
+                        f = f[0].upper() + f[1:-1].lower()
                 find_prop("Where",f)
         elif a.upper()=="A":
                 find_all()
