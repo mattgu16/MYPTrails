@@ -72,7 +72,7 @@ color: #fff;
 background-color: rgba(57, 238, 0, 0.25);
 }
 #navcontainer ul li a:active {
-color: #fff;
+background-color: rgba(41, 128, 185,0.5);
 }
 /*Links*/
 a:link  {
@@ -86,7 +86,7 @@ a:hover {
 background-color: rgba(21, 40, 216,0.25);
 }
 a:active {
-    color: #fff;;
+    color: #fff;
 }
 a:visited {
     color: rgba(52, 73, 94,1.0);
@@ -126,7 +126,7 @@ div.content {
     color: rgba(44, 62, 80,1.0);
     background-color:rgba(0, 177, 106,.75);
     text-align: center; 
-    width: 80%;
+    width: 90%;
     vertical-align: middle;
     padding: 5%;
     margin: auto;
