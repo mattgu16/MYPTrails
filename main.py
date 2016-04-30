@@ -5,9 +5,18 @@ def openpage():
         webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
 #Asks user how he/she wants to search up trails by
 def main():
-        print("Would you like to search by length, by location or by difficulty?")
         print("")
-        a=input("'L' for Length,  'O' for Location, 'D' for Difficulty, 'A' for All Trails: ").upper()
+        print("===================================================================")
+        print("                               Trails                              ")
+        print("")
+        print("            A hiking trail filter for trails in Maryland.          ")
+        print("")
+        print("                      [Fullscreen Recommended.]                    ")
+        print("===================================================================")
+        print("")
+        print("How would you like to browse the list of trails?")
+        print("")
+        a=input("Type 'L' for Length,  'O' for Location, 'D' for Difficulty, 'A' for All Trails: ").upper()
         print("")
         validfilter=["L","O","D","A"]
         while a not in validfilter:
@@ -16,17 +25,17 @@ def main():
         if a.upper()=="L":
                 find_length()
         elif a.upper()=="O":
-                f=input("Choose one: 'Northern Maryland', 'Central Maryland', 'Baltimore', 'Southern Maryland', 'Western Maryland', or 'Eastern Shore':  ")
+                f=input("Choose one: 'Northern Maryland', 'Central Maryland', 'Baltimore', 'Southern Maryland', 'Western Maryland', or 'Eastern Shore':  ").upper()
                 find_prop("Where",f)
         elif a.upper()=="A":
                 find_all()
         else:
-                p=input("Choose one: 'Easy', 'Moderate', 'Difficult':  ")
+                p=input("Choose one: 'Easy', 'Moderate', 'Difficult':  ").upper()
                 find_prop("Difficulty",p)
         openpage()
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def read_trails(path):
-        file = open(path, encoding="utf8")
+        file = open(path)
         text = file.read()
         trails = []
         g = text.find('>')
@@ -76,11 +85,14 @@ def add_results(result_list):
     </head>
     <!-------------------------Begin Body------------------------>
     <body>
+    
         <header>
+        
             <br>
             <br>
         <a href="#"><div class="content-header-wide">
-            <h1>Trail Information</h1>
+            <h1>Trails</h1>
+            <h3>Matt Gu | Tejas Guha</h3>
             </div></a>
             </header>
         <br>
@@ -125,12 +137,9 @@ def add_results(result_list):
                 file.write('<td>')
                 file.write('''<div id="navcontainer"><ul>''')
                 for e in dicty['Sources']:
-                        if e=="":
-                                e="#"
-                                href = '<li>'+'<a href=' + e + ' target="_blank">' + "" + '</a>'+'</li>'
-                        else:
-                                href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li>'
-                        file.write(href)
+                        href = '<li>'+'<a href=' + e + ' target="_blank">' + e + '</a>'+'</li><br>'
+                        if e != "":
+                                file.write(href)
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
                 file.write(''' </table>
