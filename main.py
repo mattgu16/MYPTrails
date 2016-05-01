@@ -44,7 +44,7 @@ def main():
         openpage()
 #Finds trail info in text document and orginizes it into a list with dictionaries of the information for each trail
 def read_trails(path):
-        file = open(path)
+        file = open(path, encoding="utf8")
         text = file.read()
         trails = []
         g = text.find('>')
@@ -88,8 +88,6 @@ def add_results(result_list):
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        
         <title>Trail Info</title>
     </head>
     <!-------------------------Begin Body------------------------>
@@ -101,7 +99,6 @@ def add_results(result_list):
             <br>
         <a href="#"><div class="content-header-wide">
             <h1>Trails</h1>
-            <h3>Matt Gu | Tejas Guha</h3>
             </div></a>
             </header>
         <br>
@@ -152,8 +149,10 @@ def add_results(result_list):
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
                 file.write(''' </table>
-        </div><br><br><br>''')
+        </div><br><br>
+        <center><a class="btn" href="#">Back to Top</a></div></center><br><br><br>''')
         file.write('''
+        <div class="content-small">Matt Gu | Tejas Guha | 2016
    </body>
 </html>''')
         file.close()
@@ -212,3 +211,4 @@ main()
 print(" ")
 print(" ")
 print("Call 'main()' to run the program again")
+
