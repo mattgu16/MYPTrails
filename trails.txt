@@ -1,6 +1,6 @@
 ﻿>Billy Goat Trail
 Where: Central Maryland
-Length: 7.3
+Length: 4.7
 Difficulty: Difficult
 Notes:
 In Potomac, MD.
@@ -12,7 +12,7 @@ Source: https://alltrails.com/trail/us/maryland/billy-goat-trail, https://en.wik
 
 >Sugarloaf Mountain: Blue Trail Loop
 Where: Central Maryland
-Length: 5.4
+Length: 6.1
 Difficulty: Moderate
 Notes:
 Near Dickerson, MD
@@ -56,7 +56,7 @@ Source: http://dnr2.maryland.gov/publiclands/Pages/central/gunpowder.aspx
 
 >Switchback Trail
 Where: Central Maryland
-Length: 3.8
+Length: 3.9
 Difficulty: Easy
 Notes:
 Patapsco State Park near Marriottsville, MD.
