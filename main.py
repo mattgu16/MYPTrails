@@ -152,8 +152,10 @@ def add_results(result_list):
         </div><br><br>
         <center><a class="btn" href="#">Back to Top</a></div></center><br><br><br>''')
         file.write('''
-        <div class="content-small">Matt Gu | Tejas Guha | 2016
    </body>
+   <footer>
+           <div class="content-small">Matt Gu | Tejas Guha | 2016</div>
+   </footer>        
 </html>''')
         file.close()
         #---------------------------------------#
