@@ -3,7 +3,7 @@ import os
 #--------------Opens Webpage-----------------#
 def openpage():
         webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
-#Asks user how he/she wants to search up trails by
+#Asks user how they want to search up trails by
 def main():
         print("")
         print("===================================================================")
@@ -94,9 +94,7 @@ def add_results(result_list):
     <body>
     
         <header>
-        
-            <br>
-            <br>
+            <div class="right"><a class="btn" href="#">Back to Top</a></div><br><br>
         <a href="#"><div class="content-header-wide">
             <h1>Trails</h1>
             </div></a>
@@ -149,8 +147,7 @@ def add_results(result_list):
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
                 file.write(''' </table>
-        </div><br><br>
-        <center><a class="btn" href="#">Back to Top</a></div></center><br><br><br>''')
+        </div><br><br>''')
         file.write('''
    </body>
    <footer>
