@@ -209,8 +209,5 @@ def find_length():
                 filtered.append(q["Name"])
         add_results(filtered)       
 #---------------Running Program----------------#
-main()
-print(" ")
-print(" ")
-print("Call 'main()' to run the program again")
-
+while 1>0:
+        main()
