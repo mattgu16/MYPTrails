@@ -154,7 +154,7 @@ def add_results(result_list):
         file.write('''
    </body>
    <footer>
-           <div class="content-small">Matt Gu | Tejas Guha | 2016</div>
+           <div class="content-small">Happy Hiking!<br>Matt Gu & Tejas Guha | 2016</div>
    </footer>        
 </html>''')
         file.close()
