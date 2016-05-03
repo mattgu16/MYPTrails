@@ -6,13 +6,13 @@ def openpage():
 #Asks user how they want to search up trails by
 def main():
         print('''
-╔══════════════════════════════════════════════════════════════════════════════╗
+╔════════════════════════════════════════════════╗
 ║                                    Trails                                    ║
 ║                                                                              ║
 ║                  A hiking trail filter for trails in Maryland.               ║
 ║                                                                              ║
 ║                           [Fullscreen Recommended.]                          ║
-╚══════════════════════════════════════════════════════════════════════════════╝''')
+╚════════════════════════════════════════════════╝''')
         print("")
         print("How would you like to browse the list of trails?")
         print("")
@@ -99,7 +99,7 @@ def add_results(result_list):
     
         <header>
 
-            <div class="right"><a class="btn" href="#"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a></div><br><br>
+            <div class="right"><a class="btn" href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></div><br><br>
         <a href="#"><div class="content-header-wide">
             <h1>Trails</h1>
             </div></a>
