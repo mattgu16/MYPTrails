@@ -3,23 +3,23 @@ import os
 #--------------Opens Webpage-----------------#
 def openpage():
         webbrowser.open('file://' + os.path.realpath('Trails-webpage\index.html'))
-#Asks user how he/she wants to search up trails by
+#Asks user how they want to search up trails by
 def main():
-        print("")
-        print("===================================================================")
-        print("                               Trails                              ")
-        print("")
-        print("            A hiking trail filter for trails in Maryland.          ")
-        print("")
-        print("                      [Fullscreen Recommended.]                    ")
-        print("===================================================================")
+        print('''
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                    Trails                                    ║
+║                                                                              ║
+║                  A hiking trail filter for trails in Maryland.               ║
+║                                                                              ║
+║                           [Fullscreen Recommended.]                          ║
+╚══════════════════════════════════════════════════════════════════════════════╝''')
         print("")
         print("How would you like to browse the list of trails?")
         print("")
         a=input("Type 'L' for Length,  'O' for Location, 'D' for Difficulty, 'A' for All Trails: ").upper()
         print("")
-        validfilter=["L","O","D","A"]
-        while a not in validfilter:
+        validfilter=["L","O","D","A","V"]
+        while a not in validfilter:      
                 a=input("'L' for Length,  'O' for Location, 'D' for Difficulty, 'A' for All Trails: ").upper()
                 print("")
         if a.upper()=="L":
@@ -37,6 +37,9 @@ def main():
                 find_prop("Where",f)
         elif a.upper()=="A":
                 find_all()
+        elif a.upper()=="V":
+                f=[]
+                add_results(f)
         else:
                 p=input("Choose one: 'Easy', 'Moderate', 'Difficult':  ")
                 p = p[0].upper() + p[1:].lower()
@@ -88,15 +91,15 @@ def add_results(result_list):
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon'/ > 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <title>Trail Info</title>
     </head>
     <!-------------------------Begin Body------------------------>
     <body>
     
         <header>
-        
-            <br>
-            <br>
+
+            <div class="right"><a class="btn" href="#"><i class="fa fa-home fa-3x" aria-hidden="true"></i></a></div><br><br>
         <a href="#"><div class="content-header-wide">
             <h1>Trails</h1>
             </div></a>
@@ -149,12 +152,11 @@ def add_results(result_list):
                 file.write('</ul></div></td>')
                 file.write('''</tr>''')
                 file.write(''' </table>
-        </div><br><br>
-        <center><a class="btn" href="#">Back to Top</a></div></center><br><br><br>''')
+        </div><br><br>''')
         file.write('''
    </body>
    <footer>
-           <div class="content-small">Happy Hiking!<br>Matt Gu & Tejas Guha | 2016</div>
+           <br><br><br><div class="content-small">Happy Hiking!<br>Matt Gu & Tejas Guha | 2016</div>
    </footer>        
 </html>''')
         file.close()
