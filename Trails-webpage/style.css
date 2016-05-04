@@ -4,7 +4,7 @@ Web Developer: Matthew Gu
 Date: 4/10/16
 Page Appearance: Modern/Contemporary
 */
-/* Body */
+/* Body and other elements*/
 body {
     background-color: rgb(236, 240, 241);
     background-image:url(images/banner.png);
@@ -12,7 +12,10 @@ body {
     width: 960px;
     margin: auto;
 	}
-/* Headings and Paragraphs */
+hr {
+    border-color:rgba(170, 57, 57,0.5);
+}
+/* Headings, Buttons and Paragraphs */
 h1, h2, {
     text-align:center;
     color:rgba(52, 73, 94,1.0);
@@ -30,17 +33,41 @@ header {
     color:rgba(52, 73, 94,1.0);
 }
 
+#footer
+{ 
+bottom: 0px;
+display: inline; 
+font-size: 95%
+}
 
-#noshow 
+#footer a
+{
+text-decoration: none;
+padding: .5em 1em;
+color: #fff;
+background-color: rgba(170, 57, 57,0.5);
+}
+
+#footer a:hover
+{
+color: #fff;
+background-color: rgba(21, 40, 216,0.25);
+}
+#footer ul li a:active {
+color: #fff;
+background-color: rgba(57, 238, 0, 0.25);
+}
+
+#noshow
 { 
 display: inline; 
-font-size: 175%
+font-size: 150%
 }
 
 #noshow a
 {
 text-decoration: none;
-padding: .5em 1em;
+padding: .75em 1.25em;
 color: #fff;
 background-color: rgba(170, 57, 57,0.5);
 }
@@ -95,12 +122,13 @@ a:visited {
 .btn {
   background-color: rgba(0,0,0,0.5);
   color: #fff;
-  padding: 5px 7px;
+  text-align: center;
+  padding: 25px 5px 3px 5px;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.4;
   border: none;
-  border-radius: 2px;
+  border-radius: 0.5spx;
   -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
           transition: border .25s linear, color .25s linear, background-color .25s linear;
 
@@ -120,9 +148,6 @@ a:visited {
   outline: none;
   }
 /* Div Classes */
-div.banner {
-    text-align: center;
-}
 div.content {
 	font-size: 110%;
     color: rgba(44, 62, 80,1.0);
@@ -135,7 +160,7 @@ div.content {
     border-radius: 15px 150px
 }
 div.right {
-    float: right;
+    right: 0px;
     position: fixed;
 }
 div.content-header-wide {
@@ -149,7 +174,7 @@ div.content-header-wide {
     border-radius: 10px;
 }
 div.content-small {
-	font-size: 90%;
+	font-size: 95%;
     color:#fff;
     background-color:rgba(0, 0,0,0.45);
     text-align: center; 
