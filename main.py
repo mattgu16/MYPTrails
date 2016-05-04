@@ -6,13 +6,13 @@ def openpage():
 #Asks user how they want to search up trails by
 def main():
         print('''
-╔════════════════════════════════════════════════╗
+╔==============================================================================╗
 ║                                    Trails                                    ║
 ║                                                                              ║
 ║                  A hiking trail filter for trails in Maryland.               ║
 ║                                                                              ║
 ║                           [Fullscreen Recommended.]                          ║
-╚════════════════════════════════════════════════╝''')
+╚==============================================================================╝''')
         print("")
         print("How would you like to browse the list of trails?")
         print("")
@@ -156,7 +156,10 @@ def add_results(result_list):
         file.write('''
    </body>
    <footer>
-           <br><br><br><div class="content-small">Happy Hiking!<br>Matt Gu & Tejas Guha | 2016</div>
+           <br><br><br><span id="Bottom"><div class="content-small">Happy Hiking!<br>Matt Gu & Tejas Guha | 2016<hr>	   
+           <div id="footer"><a href="https://github.com/mattgu16/Trails">Github Repository</a>
+           <a href="https://travis-ci.org/mattgu16/Trails">Travis Build Log</a>
+           <a href="stats.html">Cool Stats</a>
    </footer>        
 </html>''')
         file.close()
