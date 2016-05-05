@@ -33,7 +33,7 @@ def main():
                                 f = f + i[0].upper() + i[1:].lower() + ' '
                         f = f[:-1]
                 else:
-                        f = f[0].upper() + f[1:-1].lower()
+                        f = f[0].upper() + f[1:].lower()
                 find_prop("Where",f)
         elif a.upper()=="A":
                 find_all()
